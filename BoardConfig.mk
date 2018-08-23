@@ -51,6 +51,10 @@ TARGET_KERNEL_SOURCE := kernel/samsung/ms01lte
 TARGET_KERNEL_CONFIG := lineageos_ms01lte_defconfig
 #TARGET_KERNEL_CONFIG := test_ms01lte_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+
+#TARGET_KERNEL_CONFIG  := msm8226-sec_defconfig
+#TARGET_KERNEL_VARIANT_CONFIG := msm8926-sec_ms01lte_eur_defconfig
+#TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
  
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -67,6 +71,11 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := f2fs
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_NOT_USE_GZIP_RECOVERY_RAMDISK := true
+
+# TWRP Recovery
+RECOVERY_VARIANT := twrp
+TW_THEME := portrait_hdpi
+PRODUCT_COPY_FILES += device/samsung/ms01lte/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Avoid CMSDK issues for now
 I_WANT_A_QUAIL_STAR := true
