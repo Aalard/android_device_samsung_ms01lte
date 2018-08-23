@@ -27,9 +27,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/nfc-nci.conf:system/etc/nfc-nci.conf \
     $(LOCAL_PATH)/nfc/nfcee_access.xml:system/etc/nfcee_access.xml
 
-# Custom conf
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/init_ms01lte.conf:system/init_ms01lte.conf
-
 # Audio configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
