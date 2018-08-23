@@ -38,44 +38,18 @@
 void vendor_load_properties()
 {
     std::string bootloader = property_get("ro.bootloader");
-    std::ifstream file("/system/init_ms01lte.conf");
 
     if (bootloader.find("G7105") == 0)
     {
         /* ms01lte */
-        std::string key,value;
-        while( file )
-	{
-            std::getline(file, key);
-            size_t pos = key.find('=');
-	    if( pos != std::string::npos )
-	    {
-                value = key.substr(pos+1);
-		key = key.substr(0,pos);
-		property_set(key.c_str(), value.c_str());
-                INFO("Setting %s=%s\n", key.c_str(), value.c_str());
-	    }
-	}
-        //property_set("ro.build.fingerprint", "samsung/ms01ltexx/ms01lte:4.4.2/KOT49H/G7105XXUBQG2:user/release-keys");
-        //property_set("ro.build.description", "ms01ltexx-user 4.4.2 KOT49H G7105XXUBQG2 release-keys");
-        //property_set("ro.product.model", "SM-G7105");
-        //property_set("ro.product.device", "ms01lte");
-        //property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
-        //property_set("ro.telephony.default_network", "3");
-        //property_set("telephony.lteOnCdmaDevice", "0");
-	//property_set("telephony.lteOnGsmDevice", "0");
-    }
-    else if (bootloader.find("G7102") == 0)
-    {
-        /* ms013g */
-        property_set("ro.build.fingerprint", "samsung/ms013gxx/ms013g:4.4.2/KOT49H/G7102XXUBOB1:user/release-keys");
-        property_set("ro.build.description", "ms013gxx-user 4.4.2 KOT49H G7102XXUBOB1 release-keys");
-        property_set("ro.product.model", "SM-G7102");
-        property_set("ro.product.device", "ms013g");
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.ril_class", "SamsungMSM8226DSRIL");
-        property_set("ro.telephony.default_network", "3");
+        property_set("ro.build.fingerprint", "samsung/ms01ltexx/ms01lte:4.4.2/KOT49H/G7105XXUBQG2:user/release-keys");
+        property_set("ro.build.description", "ms01ltexx-user 4.4.2 KOT49H G7105XXUBQG2 release-keys");
+        property_set("ro.product.model", "SM-G7105");
+        property_set("ro.product.device", "ms01lte");
+        property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
+        property_set("ro.telephony.default_network", "9");
         property_set("telephony.lteOnCdmaDevice", "0");
+	property_set("telephony.lteOnGsmDevice", "1");
     }
 
     std::string device = property_get("ro.product.device");
