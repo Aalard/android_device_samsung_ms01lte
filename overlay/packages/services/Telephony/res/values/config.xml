@@ -19,4 +19,7 @@
 
     <!-- Show enabled lte option for lte device -->
     <bool name="config_enabled_lte" translatable="false">true</bool>
+
+    <!-- Show 4G symbol instead of LTE -->
+    <bool name="config_show4GForLTE">false</bool>
 </resources>
