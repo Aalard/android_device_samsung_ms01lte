@@ -18,6 +18,15 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Proprietary files
 $(call inherit-product, vendor/samsung/ms01lte/ms01lte-vendor.mk)
 
+NXP_CHIP_TYPE := 1
+PRODUCT_PACKAGES += \
+    nfc_nci.pn54x.default
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-sec.conf:system/etc/libnfc-sec.conf \
+    $(LOCAL_PATH)/nfc/nfc-nci.conf:system/etc/nfc-nci.conf \
+    $(LOCAL_PATH)/nfc/nfcee_access.xml:system/etc/nfcee_access.xml
+
 # Custom conf
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/init_ms01lte.conf:system/init_ms01lte.conf
 
