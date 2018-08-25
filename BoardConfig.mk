@@ -42,6 +42,8 @@ TARGET_UNIFIED_DEVICE := true
 BOARD_NFC_CHIPSET := pn547
 
 # Kernel
+#BOARD_CUSTOM_BOOTIMG := true
+#BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.selinux=permissive
 #BOARD_KERNEL_CMDLINE := console=null androidboot.console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.selinux=enforcing
