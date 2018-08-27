@@ -76,9 +76,9 @@ TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_NOT_USE_GZIP_RECOVERY_RAMDISK := true
 
 # TWRP Recovery
-RECOVERY_VARIANT := twrp
-TW_THEME := portrait_hdpi
-PRODUCT_COPY_FILES += device/samsung/ms01lte/twrp.fstab:recovery/root/etc/twrp.fstab
+#RECOVERY_VARIANT := twrp
+#TW_THEME := portrait_hdpi
+#PRODUCT_COPY_FILES += device/samsung/ms01lte/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Avoid CMSDK issues for now
 I_WANT_A_QUAIL_STAR := true
